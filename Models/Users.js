@@ -30,7 +30,7 @@ const UserSchema = new mongose.Schema({
     role: {
         type: String,
         enum: ["superadmin", "storekeeper", "salesperson",],
-        default: "user"
+        //default: "salesperson"
     },
         //Date created and updated at
 

@@ -20,6 +20,13 @@ app.use('/users', userRoute); //use the user route for all requests starting wit
 const connectDB = require("./config/databaseConfig");
 connectDB(); //connect to the database
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        message: "API is working"
+    });
+});
+
+
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT || 5000}`);
 });
